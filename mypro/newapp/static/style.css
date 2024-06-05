@@ -35,6 +35,14 @@
     text-align: center;
 }
 
+#customers #ad {
+    background-color: green;
+    border-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+}
+
 #customers #up {
     background-color: blue;
     border-color: white;

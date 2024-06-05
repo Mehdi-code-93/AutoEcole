@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un créneau</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<body>
+    <div class="container2">
+        <h1>Ajouter un créneau pour {{ member.firstname }} {{ member.lastname }}</h1>
+        <form action="{% url 'creneaux' member.id %}" method="post">
+            {% csrf_token %}
+            <label for="date">Date</label><br><br>
+            <input type="date" name="date" required><br><br>
+
+            <label for="heure">Heure</label><br><br>
+            <input type="time" name="heure" required><br><br>
+
+            <label for="moniteur">Moniteur</label><br><br>
+            <input type="radio" id="moniteur1" name="moniteur" value="Rachid" required>
+            <label for="moniteur1">Youssef</label><br>
+            <input type="radio" id="moniteur2" name="moniteur" value="Moniteur 2" required>
+            <label for="moniteur2">Melissa</label><br>
+            <input type="radio" id="moniteur3" name="moniteur" value="Moniteur 3" required>
+            <label for="moniteur3">Rachid</label><br>
+            <input type="radio" id="moniteur4" name="moniteur" value="Moniteur 4" required>
+            <label for="moniteur4">Emilie</label><br><br>
+
+            <button type="submit" id="new1">Ajouter</button>
+        </form>
+    </div>
+</body>
+
+</html>

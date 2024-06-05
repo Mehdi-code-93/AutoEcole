@@ -1,0 +1,8 @@
+commande
+env python "source path/to/venv/bin/activate"
+cree project "django-admin startproject projectName"
+cree app "python manage.py startapp appName"
+demarrer server "python manage.py runserver"
+migration "python manage.py makemigrations"
+migrer "python manage.py migrate"
+cree superUser "python manage.py createsuperuser"
